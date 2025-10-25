@@ -26,3 +26,36 @@
   .logo {
     height: 160px;
   }
+
+  .box{
+    max-width: 200px;
+    margin: auto;
+    margin-top: 20px;;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+
+  p{
+    font-size: 18px;
+    text-align: center;
+  }
+
+  button{
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+  }
+
+  button.add{
+    background-color: #4CAF50;
+  }
+
+  button.sub{
+    background-color: #f44336;
+  }
+
+  button.reset{
+    background-color: #008CBA;
+  }
