@@ -67,6 +67,13 @@
     color: white;
   }
 
+  button.toggle {
+    border: 0px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+  }
+
   h1{
     font-size: 28px;
     margin: 20px;
@@ -91,10 +98,10 @@
   }
 
   li.completed{
-    box-shadow: rgba(197, 255, 156, 0.16) 0px 1px 4px;
+    box-shadow: rgba(113, 213, 42, 0.16) 0px 1px 8px;
   }
 
   li.incomplete{
-    box-shadow: rgba(255, 161, 145, 0.16) 0px 1px 4px;
+    box-shadow: rgba(214, 48, 19, 0.16) 0px 1px 4px;
   }
 

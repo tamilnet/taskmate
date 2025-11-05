@@ -41,16 +41,24 @@ function App() {
     { id: 3, title: 'Task 3', completed: false },
   ]);
 
+  let [show, setShow] = useState(true);
+
+  function handleDelete(id) {
+    setTasks(tasks.filter(task => task.id !== id));
+  }
+
   return (
     <div className="App">
       <h1>Task List</h1>
       <ul>
-        {tasks.map(task => (
-          <li key={task.id}>
+        <button onClick={() => setShow(!show)} className='toggle'>Toggle</button>
+        {show &&
+        tasks.map(task => (
+          <li key={task.id} className={task.completed ? "completed" : "incomplete"}>
             <span>
               {task.id} - {task.title}
             </span>
-            <button className='delete'>Delete</button>
+            <button onClick={() => handleDelete(task.id)} className='delete'>Delete</button>
           </li>
         ))}
       </ul>
