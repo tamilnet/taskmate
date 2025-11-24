@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import TaskCard from './TaskCard.jsx';
 
 
 const TaskList = () => {
@@ -16,7 +16,7 @@ const TaskList = () => {
     setTasks(tasks.filter(task => task.id !== id));
   }
 
-  
+
   return (
     <>
     <h1>Task List</h1>
@@ -24,12 +24,7 @@ const TaskList = () => {
         <button onClick={() => setShow(!show)} className='toggle'>Toggle</button>
         {show &&
         tasks.map(task => (
-          <li key={task.id} className={task.completed ? "completed" : "incomplete"}>
-            <span>
-              {task.id} - {task.title}
-            </span>
-            <button onClick={() => handleDelete(task.id)} className='delete'>Delete</button>
-          </li>
+          < TaskCard key={task.id} task={task} handleDelete={handleDelete}/>
         ))}
       </ul>
       </>
